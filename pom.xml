@@ -859,6 +859,7 @@
 									<transaction src="db/cms/jeesite_${jdbc.type}.sql"/>
 									<transaction src="db/oa/jeesite_${jdbc.type}.sql"/>
 									<transaction src="db/prj/jeesite_${jdbc.type}.sql"/>
+									<transaction src="db/demo/jeesite_${jdbc.type}.sql"/>
 									<transaction src="db/act/drop/activiti.${jdbc.type}.drop.engine.sql"/>
 									<transaction src="db/act/drop/activiti.${jdbc.type}.drop.history.sql"/>
 									<transaction src="db/act/drop/activiti.${jdbc.type}.drop.identity.sql"/>
