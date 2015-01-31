@@ -38,6 +38,17 @@ public class DictUtils {
 		}
 		return defaultValue;
 	}
+	
+	public static Dict getDict(String value, String type, Dict defaultDict){
+		if (StringUtils.isNotBlank(type) && StringUtils.isNotBlank(value)){
+			for (Dict dict : getDictList(type)){
+				if (type.equals(dict.getType()) && value.equals(dict.getValue())){
+					return dict;
+				}
+			}
+		}
+		return defaultDict;
+	}
 
 	public static String getDictValue(String label, String type, String defaultLabel){
 		if (StringUtils.isNotBlank(type) && StringUtils.isNotBlank(label)){
