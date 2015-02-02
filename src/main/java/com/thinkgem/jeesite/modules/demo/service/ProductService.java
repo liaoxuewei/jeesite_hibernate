@@ -53,7 +53,7 @@ public class ProductService extends BaseService {
 	
 	@Transactional(readOnly = false)
 	public void save(Product product) {
-		productDao.clear();
+		productDao.clear();//TODO:清理缓存后，才不会影响Cate1的处理，为什么？
 		productDao.save(product);
 	}
 	
