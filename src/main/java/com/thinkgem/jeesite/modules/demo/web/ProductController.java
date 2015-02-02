@@ -19,7 +19,10 @@ import com.thinkgem.jeesite.common.config.Global;
 import com.thinkgem.jeesite.common.persistence.Page;
 import com.thinkgem.jeesite.common.web.BaseController;
 import com.thinkgem.jeesite.common.utils.StringUtils;
+import com.thinkgem.jeesite.modules.sys.entity.Dict;
+import com.thinkgem.jeesite.modules.sys.entity.Office;
 import com.thinkgem.jeesite.modules.sys.entity.User;
+import com.thinkgem.jeesite.modules.sys.utils.DictUtils;
 import com.thinkgem.jeesite.modules.sys.utils.UserUtils;
 import com.thinkgem.jeesite.modules.demo.entity.Product;
 import com.thinkgem.jeesite.modules.demo.service.ProductService;
@@ -66,7 +69,7 @@ public class ProductController extends BaseController {
 
 	@RequiresPermissions("demo:product:edit")
 	@RequestMapping(value = "save")
-	public String save(Product product, Model model, RedirectAttributes redirectAttributes) {
+	public String save(Product product, HttpServletRequest request, Model model, RedirectAttributes redirectAttributes) {
 		if (!beanValidator(model, product)){
 			return form(product, model);
 		}

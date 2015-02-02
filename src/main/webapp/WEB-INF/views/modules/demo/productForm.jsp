@@ -60,6 +60,15 @@
 						</form:select>
 					</div>
 				</div>
+				<div class="control-group">
+					<label class="control-label" for="cate1">分类1:</label>
+					<div class="controls">
+						<form:select id="cate1" path="cate1.value">
+							<form:option value="" label="请选择"/>
+							<form:options items="${fns:getDictList('gl_product_cate1')}" itemLabel="label" itemValue="value" htmlEscape="false"/>
+						</form:select>
+					</div>
+				</div>
 			</div><!-- jAmEs_ add -->
 			<div class="tab-pane fade" id="tab2"><!-- jAmEs_ add -->
 				<div class="control-group">

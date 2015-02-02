@@ -53,6 +53,7 @@ public class ProductService extends BaseService {
 	
 	@Transactional(readOnly = false)
 	public void save(Product product) {
+		productDao.clear();
 		productDao.save(product);
 	}
 	
