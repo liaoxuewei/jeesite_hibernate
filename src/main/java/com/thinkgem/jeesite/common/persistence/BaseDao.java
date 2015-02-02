@@ -108,6 +108,13 @@ public class BaseDao<T> {
 		getSession().clear();
 	}
 	
+	/**
+	 * 清除指定对象的缓存数据
+	 */
+	public void evict(Object obj){ 
+		getSession().evict(obj);
+	}
+	
 	// -------------- QL Query --------------
 
 	/**
