@@ -66,6 +66,11 @@ public class IdGen implements IdGenerator, SessionIdGenerator {
 		System.out.println(IdGen.uuid());
 		System.out.println(IdGen.uuid().length());
 		System.out.println(new com.thinkgem.jeesite.common.utils.IdGen().getNextId());
+		System.out.println(IdGen.randomBase62(32));
+		System.out.println(IdGen.randomBase62(32));
+		System.out.println(Long.toHexString(IdGen.randomLong()));
+		System.out.println(Long.toHexString(Integer.MAX_VALUE));
+		System.out.println(IdGen.randomLong());
 	}
 
 }
