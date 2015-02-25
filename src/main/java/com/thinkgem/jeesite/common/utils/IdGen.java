@@ -39,6 +39,27 @@ public class IdGen implements IdGenerator, SessionIdGenerator {
 	public static long randomLong() {
 		return Math.abs(random.nextLong());
 	}
+	
+	/**
+	 * 使用SecureRandom随机生成Int. 
+	 */
+	public static int randomInt() {
+		return Math.abs(random.nextInt());
+	}
+
+	/**
+	 * 生成IntId. 
+	 */
+	public static int IntId() {
+		return 0;
+	}
+
+	/**
+	 * 生成GuidId. 
+	 */
+	public static UUID GuidId() {
+		return com.thinkgem.jeesite.common.utils.UUID.getUuid();
+	}
 
 	/**
 	 * 基于Base62编码的SecureRandom随机生成bytes.
